@@ -1,0 +1,13 @@
+sudo apt-get install ddclient
+sudo nano /etc/ddclient.conf
+  use=web
+  ssl=yes
+  protocol=noip
+  login=<USERNAME>
+  password='<PASSWORD>'
+  <YOUR_HOSTNAME>
+ctrl+o to save ctrl+x to exit
+to test run this command:
+sudo ddclient -daemon=0 -debug -verbose -noquiet
+then restart the service
+sudo service ddclient restart
