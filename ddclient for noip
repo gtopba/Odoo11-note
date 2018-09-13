@@ -1,5 +1,6 @@
 sudo apt-get install ddclient
 sudo nano /etc/ddclient.conf
+  pid=/var/run/ddclient.pid
   use=web
   ssl=yes
   protocol=noip
