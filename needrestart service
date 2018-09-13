@@ -1,0 +1,6 @@
+It shows a handy dialogue at the end of apt upgrade and prompts service restarts.
+
+sudo apt install needrestart
+/etc/needrestart/needrestart.conf
+# Restart services (l)ist only, (i)nteractive or (a)utomatically.
+#$nrconf{restart} = 'i';
