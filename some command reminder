@@ -1,0 +1,8 @@
+sudo service --status-all
+sudo service --status-all | grep <service_name>
+sudo service <service_name> status
+ps -ef
+ps -ef | grep <service_name>
+systemctl status <service_name>
+ps aux
+ps aux | grep <postgres>
