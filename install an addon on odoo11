@@ -1,0 +1,5 @@
+wget <module_link> ;remove all characters after the ?
+unzip <file_name.zip>
+mv <module_folder> <destination>
+sudo nano /etc/odoo11.conf ; addons_path = /opt/odoo/odoo11/addons,/opt/odoo/odoo11-custom-addons
+back to odoo web, open dev mode, update app list, then install the new app
