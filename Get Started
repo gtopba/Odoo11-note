@@ -1,3 +1,4 @@
 Import products from excel with required fields [External ID, Name, Cost, Sales Price, taxes_id/id, supplier_taxes_id/id]
-Import Inventory Adjustment with required fields [External ID, Inventories/Product, Inventories/Checked Quantity, Inventory Reference, (Inventories/Location/Database ID)]
+Import Inventory Adjustment with required fields [name, line_ids/product_qty, line_ids/location_id/id, line_ids/product_id/id or name or internal ref, line_ids/product_uom_id/id]
+(eg. update the qty to 100,	100,	stock.stock_location_stock,	ไขควง  เล็ก,	product.product_uom_unit)
 Note! if you have product_variant_id, use field name: Inventories/ Product/ Database ID
