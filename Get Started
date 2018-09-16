@@ -1,0 +1,3 @@
+Import products from excel with required fields [External ID, Name, Cost, Sales Price, taxes_id/id, supplier_taxes_id/id]
+Import Inventory Adjustment with required fields [External ID, Inventories/Product, Inventories/Checked Quantity, Inventory Reference, (Inventories/Location/Database ID)]
+Note! if you have product_variant_id, use field name: Inventories/ Product/ Database ID
