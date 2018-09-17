@@ -3,3 +3,4 @@ Import Inventory Adjustment with required fields [name, line_ids/product_qty, li
 (eg. update the qty to 100,	100,	stock.stock_location_stock,	ไขควง  เล็ก,	product.product_uom_unit)
 Note! if you have product_variant_id, use field name: Inventories/ Product/ Database ID
 Note! Export Products with Product/External ID(only found in Odoo12) for line_ids/product_id/id field (Not same as External ID)
+Note! Odoo11 might only can import Inventory Adjustment by Inventories/Product (Product name) name should not duplicate 
