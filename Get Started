@@ -6,7 +6,8 @@ Imprementation of Inventory Module without Accounting Module.
 3. Import Vendors
 4. Import products the fields [Product Category, Name, Cost, Sales Price, UoM, Barcode, Product Type, Vendors/Vendor,  Image, Description, Internal Reference, taxes_id/id, supplier_taxes_id/id]
 Note! Odoo11, should not import External ID as importing inventory needs odoo generated External ID (Exporting does not have same order as original excel) 
-Import Inventory Adjustment with required fields [name, line_ids/product_qty, line_ids/location_id/id, line_ids/product_id/id or name or internal ref, line_ids/product_uom_id/id]
+5. Create Warehouses and import Locations with the field [Parent Location, Location name, Location Type, Corridor(X), Shelves(Y), Height(Z)]
+6 .Import Inventory Adjustment with the fields [name, line_ids/product_qty, line_ids/location_id/id, line_ids/product_id/id or name or internal ref, line_ids/product_uom_id/id]
 (eg. update the qty to 100,	100,	stock.stock_location_stock,	ไขควง  เล็ก,	product.product_uom_unit)
 Note! if you have product_variant_id, use field name: Inventories/ Product/ Database ID
 Note! Export Products with Product/External ID(only found in Odoo12) for line_ids/product_id/id field (Not same as External ID)
