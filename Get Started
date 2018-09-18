@@ -1,3 +1,4 @@
+1. Enable UoM, Attribute and Variants, Storage Location
 Import products from excel with required fields [External ID, Name, Cost, Sales Price, taxes_id/id, supplier_taxes_id/id]
 Note! Odoo11, should not import External ID as importing inventory needs odoo generated External ID (Exporting does not have same order as original excel) 
 Import Inventory Adjustment with required fields [name, line_ids/product_qty, line_ids/location_id/id, line_ids/product_id/id or name or internal ref, line_ids/product_uom_id/id]
