@@ -1,5 +1,10 @@
-1. Enable UoM, Attribute and Variants, Storage Location
-Import products from excel with required fields [External ID, Name, Cost, Sales Price, taxes_id/id, supplier_taxes_id/id]
+Imprementation of Inventory Module without Accounting Module.
+
+1. Enable UoM, Attribute and Variants, Storage Locations, Multi-Warehouses
+2. Import Product Categories with the fields [Name, Parent Category]
+    e.g. [ไขควง,	All / Saleable]
+3. Import Vendors
+4. Import products the fields [Product Category, Name, Cost, Sales Price, UoM, Barcode, Product Type, Vendors/Vendor,  Image, Description, Internal Reference, taxes_id/id, supplier_taxes_id/id]
 Note! Odoo11, should not import External ID as importing inventory needs odoo generated External ID (Exporting does not have same order as original excel) 
 Import Inventory Adjustment with required fields [name, line_ids/product_qty, line_ids/location_id/id, line_ids/product_id/id or name or internal ref, line_ids/product_uom_id/id]
 (eg. update the qty to 100,	100,	stock.stock_location_stock,	ไขควง  เล็ก,	product.product_uom_unit)
