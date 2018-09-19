@@ -12,3 +12,6 @@ Note! Odoo11, should not import External ID as importing inventory needs odoo ge
 Note! if you have product_variant_id, use field name: Inventories/ Product/ Database ID
 Note! Export Products with Product/External ID(only found in Odoo12) for line_ids/product_id/id field (Not same as External ID)
 Note! Inventories/Product (Product name) should not duplicate. 
+
+POS
+1. Install 3rd party modules : POS Ticket Logo and Barcode, POS Order Notes
