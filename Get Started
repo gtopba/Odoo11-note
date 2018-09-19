@@ -16,3 +16,6 @@ Note! Inventories/Product (Product name) should not duplicate.
 POS
 1. Install 3rd party modules : POS Ticket Logo and Barcode, POS Order Notes
 2. Edit printer margins L0.4" R0" T0" B0"
+
+Accounting
+1. Activate Dev Mode -> Settings -> User -> Edit -> Show Full Accounting Features -> Save. Now we got Accounting Features in Invoicing Modules.
