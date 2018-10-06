@@ -1,4 +1,4 @@
-Odoo 11 on Ubuntu server 18 step by step
+Odoo 11 on Ubuntu server 18 step by step (Database Locale should be changed accord to languge)
 
 1. 		sudo apt install ssh
 		ip address
