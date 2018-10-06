@@ -17,5 +17,11 @@ POS
 1. Install 3rd party modules : POS Ticket Logo and Barcode, POS Order Notes
 2. Edit printer margins L0.4" R0" T0" B0"
 
+POS Multiple price per product
+Price can be changed automaticaly per product based on min qty. POS can have multiple price lists eg. customer segments. Each POS can have its own price lists.
+1. Point of Sale -> Configulation -> Setting -> Multiple Product Prices -> Multiple prices per product.
+2. Create new product -> sale -> price list -> add new price rules
+For example, a product priced at 6 usd with be changed to 5 usd when qty >= 5. This can be a default price list.
+
 Accounting
 1. Activate Dev Mode -> Settings -> User -> Edit -> Show Full Accounting Features -> Save. Now we got Accounting Features in Invoicing Modules.
