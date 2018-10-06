@@ -1,0 +1,13 @@
+Hotkeys
+1. Ctrl + Shift + End         Selects cells from the current cell to the last cell that contains data
+2. Ctrl + D                   Auti fill selected cells
+
+Tips
+1. No merged cell
+2. No empty row
+3. No Duplicated name
+4. No empty cell for category, .. , etc
+
+Fix
+1. Use filter to find empty rows and delete
+2. Use conditional to find duplicates
