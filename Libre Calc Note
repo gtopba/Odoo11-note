@@ -7,6 +7,7 @@ Tips
 2. No empty row
 3. No Duplicated name
 4. No empty cell for category, .. , etc
+5. No / , . ? etc in name
 
 Fix
 1. Use filter to find empty rows and delete
