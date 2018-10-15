@@ -12,3 +12,9 @@ Tips
 Fix
 1. Use filter to find empty rows and delete
 2. Use conditional to find duplicates
+
+Removing trailing spaces
+Find & Replace:
+Search = spacebar*$
+Replace = nothing
+Check Regular Expressions
