@@ -12,7 +12,7 @@ Tips! UoM Import must have same the languge as the user. All information to be i
 Note! Odoo11, should not import External ID as importing inventory needs odoo generated External ID (Exporting does not have same order as original excel) 
 7. Create Warehouses and import Locations with the field [Parent Location, Location name, Location Type, Corridor(X), Shelves(Y), Height(Z)]
 8. Import price list for each POS with the fields [List name, Product, min qty, fixed price].
-9. Create new POS for the new warehouse.
+9. Create new POS for the new warehouse and config the pricelist.
 10. Import Inventory Adjustment with the fields [Inventory Reference, Inventories / Checked Quantity, Inventories / Location, Inventories / Product, Inventories / Product Unit of Measure]
 11. Create new users. In the list view, choose a user and Action -> Change password. Then set access right to suitable POS.
 
