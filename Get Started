@@ -14,6 +14,7 @@ Note! Odoo11, should not import External ID as importing inventory needs odoo ge
 8. Import price list for each POS with the fields [List name, Product, min qty, fixed price].
 9. Create new POS for the new warehouse and config the pricelist.
 10. Import Inventory Adjustment with the fields [Inventory Reference, Inventories / Checked Quantity, Inventories / Location, Inventories / Product, Inventories / Product Unit of Measure]
+    Inventoried Location WH/Stock when add product to other warehouse? why?
 11. Create new users. In the list view, choose a user and Action -> Change password. Then set access right to suitable POS.
 
 Note! if you have product_variant_id, use field name: Inventories/ Product/ Database ID
@@ -21,7 +22,7 @@ Note! Export Products with Product/External ID(only found in Odoo12) for line_id
 Note! Inventories/Product (Product name) should not duplicate. 
 
 POS
-1. Install 3rd party modules : POS Ticket Logo and Barcode, POS Order Notes
+1. Install 3rd party modules : POS Ticket Logo and Barcode, POS Order Notes, POS
 2. Edit printer margins L0.4" R0" T0" B0"
 
 POS Multiple price per product
