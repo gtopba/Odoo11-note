@@ -35,7 +35,7 @@ For example, a product priced at 6 usd with be changed to 5 usd when qty >= 5. T
 Accounting
 1. Activate Dev Mode -> Settings -> User -> Edit -> Show Full Accounting Features -> Save. Now we got Accounting Features in Invoicing Modules.
 
-Outgoing/incomming email server
+Outgoing/incoming email server
 Outgoing
 1. Activate dev mode
 2. Settings -> Email -> Outgoing Mail Server -> Create -> input following infomation
@@ -56,6 +56,22 @@ Outgoing
     5.1 Advanced settings -> Outgoing Mail Server -> Choose our new mail server -> save	
 6. Contacts -> Create -> one contact with an email for testing purpose (use different email, same email might not receive) -> save
 7. Contacts -> Select the created contact -> send message -> expand view -> choose the created template -> Send.
+Incoming
+1. Settings -> General Settings -> External Email Servers -> Save
+2. Settings -> Technical -> Parameters -> System Parameters -> mail.catchall.domain -> Value -> gmail.com
+3. Settings -> Technical -> Incoming Mail Servers ->  Create -> Input
+    Name : Incoming Mail Server
+    Server Type : IMAP Server
+    Server Name : imap.gmail.com
+    Port : 993
+    SSL/TLS : yes
+    Username : your email
+    Password : Generated app password
+4. Test and confirm
+Create a new task/record from the mail
+5.  Settings -> Technical -> Incoming Mail Servers ->  Created mail server -> edit -> Create a New Record -> Task -> Save
+6. Send email to the incoming mail and click fetch now (Project module must be installed)
+7. Project -> Tasks -> erase the filter -> here is your income email as a task (you can have another email for other modules)
 
 Todo
 1. Install firewall
