@@ -54,7 +54,7 @@ Outgoing
     Subject : Any
     Body : Any
     5.1 Advanced settings -> Outgoing Mail Server -> Choose our new mail server -> save	
-6. Contacts -> Create -> one contact with an email for testing purpose. -> save
+6. Contacts -> Create -> one contact with an email for testing purpose (use different email, same email might not receive) -> save
 7. Contacts -> Select the created contact -> send message -> expand view -> choose the created template -> Send.
 
 Todo
