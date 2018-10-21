@@ -35,6 +35,28 @@ For example, a product priced at 6 usd with be changed to 5 usd when qty >= 5. T
 Accounting
 1. Activate Dev Mode -> Settings -> User -> Edit -> Show Full Accounting Features -> Save. Now we got Accounting Features in Invoicing Modules.
 
+Outgoing/incomming email server
+Outgoing
+1. Activate dev mode
+2. Settings -> Email -> Outgoing Mail Server -> Create -> input following infomation
+    Description : any name
+    Priority : 1 = highest prio
+    SMTP Server : smtp.gmail.com
+    SMTP Port : 465
+    Connection Security : SSL/TLS
+    Username : your email
+    Password : Generated app password
+3. Test connection (Make sure you have enabled IMAP in your gmail account)
+4. Settings -> Technical -> Email -> Templates (CRM, Contact Module must be installed)
+5. Create -> input following
+    Name : Any
+    Applies to : contact
+    Subject : Any
+    Body : Any
+    5.1 Advanced settings -> Outgoing Mail Server -> Choose our new mail server -> save	
+6. Contacts -> Create -> one contact with an email for testing purpose. -> save
+7. Contacts -> Select the created contact -> send message -> expand view -> choose the created template -> Send.
+
 Todo
 1. Install firewall
 2. Setup VPN
