@@ -34,6 +34,7 @@ For example, a product priced at 6 usd with be changed to 5 usd when qty >= 5. T
 
 Accounting
 1. Activate Dev Mode -> Settings -> User -> Edit -> Show Full Accounting Features -> Save. Now we got Accounting Features in Invoicing Modules.
+2. Install Sales and Purchasing 
 
 Outgoing/incoming email server
 Outgoing
