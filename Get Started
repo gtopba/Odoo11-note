@@ -10,6 +10,7 @@ Tips! UoM Import must have same the languge as the user. All information to be i
 5. Import Vendors
 6. Import products the fields [Product Category, Name, Cost, Sales Price, UoM, Barcode, Product Type, Vendors/Vendor,  Image, Description, Internal Reference, taxes_id/id, supplier_taxes_id/id]
 Note! Odoo11, should not import External ID as importing inventory needs odoo generated External ID (Exporting does not have same order as original excel) 
+7. Add product images before Inventory adjustment so that it can be back up before doing inventory.
 7. Create or import contacts.
 8. Create Warehouses and import Locations with the field [Parent Location, Location name, Location Type, Corridor(X), Shelves(Y), Height(Z)]
 !!! Multiple prices per product must be enabled first.
