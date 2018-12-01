@@ -1,0 +1,25 @@
+Ref : Youtube Tititab Srisookco
+1. install Ubuntu
+2. /etc/apt/sourcelist -> (nano change us to th)
+3. sudo apt update
+4. sudo apt upgrade
+5. sudo apt install openssh-server
+6. ipaddr (check ip address and use Putty to login)
+7. sudo nano /etc/hosts (change server name optional)
+
+On ssh terminal
+
+8. ssh-copy-id -i userna@ipaddress (So that next login it won't ask for password. Instread using publick key which is more secure)
+  (can see the key using cd .ssh/ -> cat authorized_keys)
+
+Download source code
+9. nightly.odoo.com/11.0/nightly/src/   -> copy the lastest release link then
+10. wget https://....
+11. tar xzf [filrname] and optionally rename (mv oldname newname)
+12.cd into the extracted folder
+13. cd setup
+14. mv odoo odoo.py
+15. sudo chmod +X odoo.py (make it executable)
+16. mv odoo.py .. (move it outside)
+17. sudo apt-install python3
+18. python3 odoo.py or ./odoo.py (+X needed)
