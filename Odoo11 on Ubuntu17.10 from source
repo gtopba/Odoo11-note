@@ -23,3 +23,148 @@ Download source code
 16. mv odoo.py .. (move it outside)
 17. sudo apt-install python3
 18. python3 odoo.py or ./odoo.py (+X needed)
+19. sudo apt install python3-pip
+20. sudo pip3 install pypdf2
+20. sudo pip3 install passlib
+20. sudo pip3 install babel
+20. sudo pip3 install werkzeug
+and so on ... ./odoo.py will tell required module and use pip install one by one
+Note : psycopg2 need to use psycopg2-binary
+21. wkhtmltopdf is not python use sudo apt install instead 
+22. node-less, postgresql also
+
+Config postgresql
+23. /etc/postgresql/9.6/main/  sudo nano postgresql.conf
+	
+	listening address = '*'
+	
+24. sudo nano pg_hba.conf
+add
+	host all all 0.0.0.0/0 md5         (to allow all ip can login to database , not good , for test only)
+	
+25. sudo service postgresql restart
+26. sudo su - postgres
+	psql
+	alter user postgres with password 'admin':
+	\q
+	exit
+	(this will change password)
+	
+27. using pgAdmin software to access the postgres -> register server
+	Name ODOO DEV
+	Host ipadress of the server
+	Port 5432
+	DB postgres
+	Username postgres
+	Password admin
+	
+28. ODOO DEV > Login Roles > postgres
+	Role name : odoo
+	password : odoo
+	
+	Can create databases : yes
+29. ./odoo.py -s
+	cd
+	mv .odoorc odoo.conf
+	mv odoo.conf odoo-11.0-20180820/
+	cd odoo-11.0-20180820/
+	nano odoo.conf
+	
+		db_host = server ip
+		db_password = odoo
+		db_user = odoo
+		
+	save/exit
+	
+30. ./odoo.py -c odoo.conf
+
+Starting setup by tititab
+
+1. install modules
+2. config company profile, used for report header
+3. config date format %d/%m/%Y
+4. not recommend using translation, table will mixed
+5. inactive all withholding taxes in Invoicing->Accounting->Taxes
+6. input VAT -> ภาษีซื้อ (แยก 7%)
+7. output VAT -> ภาษีขาย (แยก 7%)
+8. create ภาษีซื้อ (รวม 7%) : 7%, Included in Prince, Purchases
+9. Invoice -> setting
+	Sales Tax : ภาษีขาย (แยก 7%)
+	Pirchase Tax : ภาษีซื้อ (แยก 7%)
+10. User/Administrator -> Multi Currencies : yes
+						  Show Full Accounting Features : yes
+						  Manage Pricelist Items : yes
+11. Invoicing->Accounting->Currencies-> USD Edit
+12. Rounding Factor : 0.0001
+	Decimal Places : 4
+	Rates : need input everyday with format USD/THB
+	
+Tip : In case of forgetting username. Can look up the database. using this command in pgAdmin
+		select * from res_users
+		
+13. create sales/customers
+
+Tip : Can duplicate menu to where u want. Settings -> User Interface -> Menu Items -> Duplicate the menu and change location
+		Useful for assigning each role of worker
+		
+Tip : Settings -> Database Structure -> Models -> res.users (can config access right for user here)
+
+Note : even admin should not have delete right, it can destroy the whole system record
+Note : users should not be able to modify data (Master), the record will be messed up
+
+14. Payment Term (used for computing due date)
+15. sales->Settings->Multiple Sales Prices per Product : yes
+16. Salse->Catalog->Pricelists
+		Edit-> pricelists(THB)
+			Country Group = effective region, not specified = all
+			Can do price for Global, Catalog, Product, Variant
+			
+		In custtomer, can specific each pricelist.
+[VDO5]		
+17. Create Vendors, Is a Vendor : yes
+Note : After used, never edit it, will effect past record. Always create new and inactive the old one. 
+18. Settings->General Settings->Units of Measure : yes
+
+Note : Should finish all master config before any transaction. 
+19. Settings->Technical->Database Structure->Decimal Accuracy->Product Unit of Measure : change desired digit
+Note: Master, Vendors,Product,UoM,Product Cat, CoA must be completed before start any transaction. 
+Note: there is only 2 Master, admin and Accountant.
+
+Adding vendor for each product.
+19. Product->Purchase->Add vendor
+
+Tip : Delete "debug#" in the url to deactivate dev mode
+Note : Process is, someone open PR asking for PO, accountant will contact vendors asking for prices, adding them in to vendor list of that product, Auto reordering will order the top list by opening RFQ to fulfill max qty.
+
+TIP : most of time in Product, Control Policy is On received qty for (stockable)
+							   Control Policy is On order qty for (service)
+							   
+20. Settings->Sequences & identifiers -> Sequences
+	Prefix : PO%(y)s%(month)s-
+	
+Postgres Firewall
+21. sudo nano /etc/postgresql/9.6/main/pg_hba.conf
+	hostssl all all 192.168.220.0/24 md5 clientert=1
+	sudo service postgresql restart
+	sudo ufw enable  (another firewall)
+	
+-----------------------------------------------------------------------
+Warehouse / Location / Onhand
+1. Inventory -> Settings -> Warehouse
+	Storage Locations : Yes
+	Multiple Warehouses : Yes
+	Multi-Step Routes : Yes
+  
+----------------------------------------------------
+Account Receivable / Deposit / Billing / Payment / Cheque
+1. Invoicing -> Accounting -> Journals -> Create :  สมุดรายวันขาย(มัดจำ) , AI
+2. Install module : Show sheets with full width.
+
+Customized Thai accounting
+1. มัดจำ
+2. รับชำระ
+3.เช็คเด่ง
+4. คืนสินค้า
+  
+  
+	
