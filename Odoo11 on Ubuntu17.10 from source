@@ -62,8 +62,7 @@ add
 	password : odoo
 	
 	Can create databases : yes
-29. ./odoo.py -s
-	cd
+29. ./odoo.py -s (run this command to generate file .odoorc using ls -all to see (cd .. to see ooutside))
 	mv .odoorc odoo.conf
 	mv odoo.conf odoo-11.0-20180820/
 	cd odoo-11.0-20180820/
