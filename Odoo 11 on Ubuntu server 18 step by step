@@ -18,6 +18,7 @@ Odoo 11 on Ubuntu server 18 step by step (Database Locale should be changed acco
 	then run:
 
 		sudo apt update
+		sudo apt upgrade
 		
 	and finally:
 
@@ -34,6 +35,31 @@ Odoo 11 on Ubuntu server 18 step by step (Database Locale should be changed acco
 5.	Install the Postgres package from the Ubuntu’s default repositories:
 
 		sudo apt-get install postgresql
+	--------------------------------------------------------------------------------------------------
+	Using pgAdmin
+	
+	go to /etc/postgresql/9.6/main/ then sudo nano postgresql.conf
+		add listening address = '*'
+	
+	sudo nano pg_hba.conf
+		add host all all 0.0.0.0/0 md5         (to allow all ip can login to database , not good , for test only)
+		
+	sudo service postgresql restart
+	
+	sudo -u postgres psql postgres
+	\password postgres
+	(change password to sth like admin)
+	\q
+	(this will change password)
+	
+	using pgAdmin software to access the postgres -> register server
+	Name ODOO DEV
+	Host ipadress of the server
+	Port 5432
+	DB postgres
+	Username postgres
+	Password admin
+	--------------------------------------------------------------------------------------------------
 		
 	create a postgres user with the same name as the previously created system user, in our case odoo:
 	
