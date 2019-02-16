@@ -43,11 +43,10 @@ add
 	host all all 0.0.0.0/0 md5         (to allow all ip can login to database , not good , for test only)
 	
 25. sudo service postgresql restart
-26. sudo su - postgres
-	psql
-	alter user postgres with password 'admin':
+26. sudo -u postgres psql postgres
+	\password postgres
+	(change password to sth like admin)
 	\q
-	exit
 	(this will change password)
 	
 27. using pgAdmin software to access the postgres -> register server
