@@ -28,7 +28,9 @@ POS
 1. Install 3rd party modules : POS Ticket Logo and Barcode, POS Order Notes, POS Stock, Restriction of POS User, Pos Smart Dashboard,POS Multi Session Sync
 2. Edit printer margins L0.4" R0" T0" B0"
 3. May need to clear cache in order to show logo on the receipt 
-4. Settings > General Settings > Business Documents > Document Template > Standard
+4. Settings > General Settings > Business Documents > Document Template > Standard (to solve unable to gen report)
+5. Settings -> User Interface -> Menu Items -> Point of Sale/Orders/Orders (delete Point of Sale/User so tat they can't see history)
+6. Settings -> User Interface -> Menu Items -> Point of Sale/Catalog/Products (Add Point of Sale/Manager to only allow manager to see)
 
 POS Multiple price per product
 Price can be changed automaticaly per product based on min qty. POS can have multiple price lists eg. customer segments. Each POS can have its own price lists.
