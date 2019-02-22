@@ -41,6 +41,7 @@ Accounting
 2. Install Sales and Purchasing 
 3. create custom account e.g. income account for T-shirt
 4. Create Journal entry e.g. Entry for owner investment into company. it is a company liabilities, the money is own by onwer.
+5. inactive all withholding taxes in Invoicing->Accounting->Taxes
 
 Outgoing/incoming email server
 Outgoing
