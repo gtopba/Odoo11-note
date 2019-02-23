@@ -161,6 +161,16 @@ Odoo 11 on Ubuntu server 18 step by step (Database Locale should be changed acco
 
 		sudo journalctl -u odoo11
 		
+Istall Wkhtmltopdf
+1. wget to download latest version here https://github.com/wkhtmltopdf/wkhtmltopdf/releases
+2. if have older version
+	sudo apt-get remove wkhtmltopdf
+	sudo apt-get autoremove 
+3. install it using 
+	sudo dpkg -i /path/to/deb/file
+	sudo apt-get install -f
+3. sudo apt install xfonts-thai 
+		
 Test the Installation
 
 	Open your browser and type: http://<your_domain_or_IP_address>:8069
