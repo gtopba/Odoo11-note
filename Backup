@@ -1,0 +1,37 @@
+tar -cvpzf backup.tar.gz --exclude=/backup.tar.gz --one-file-system /
+
+Restoring
+You will want to restore from a Live CD. If needed, first partition and format the drive. You can do this with gparted. Then simply mount the partition you are going to restore somewhere. If you open the drive in nautilus, it will be auto mounted somewhere under /media. Take a look to find out where with:
+
+ls /media
+Restore Your Backup
+
+sudo tar -xvpzf /path/to/backup.tar.gz -C /media/whatever --numeric-owner
+A brief explanation:
+
+x - Tells tar to extract the file designated by the f option immediately after. In this case, the archive is /home/test/backup.tar.gz
+
+-C <directory> - This option tells tar to change to a specific directory before extracting. In this example, we are restoring to the root (/) directory.
+
+--numeric-owner - This option tells tar to restore the numeric owners of the files in the archive, rather than matching to any user names in the environment you are restoring from. This is due to that the user id:s in the system you want to restore don't necessarily match the system you use to restore (eg a live CD).
+
+IconsPage/warning.png This will overwrite every single file and directory on the designated mount with the one in the archive. Any file created after the archive, will have no equivalent stored in the archive and thus will remain untouched
+
+Allow the restoration the time it needs to complete. Once extraction is completed, you may need to recreate directories that were not included in the original archive because you excluded them with --exclude. This does not apply to filesystems excluded with --one-file-system. This can be done with the following command:
+
+mkdir /proc /sys /mnt /media 
+Once finished, reboot and everything should be restored to the state of your system when you made the backup. 
+
+Restoring GRUB
+For the system to boot, you will need to restore grub. To do this, you will need to reconfigure it in a chroot:
+
+sudo -s
+for f in dev dev/pts proc ; do mount --bind /$f /media/whatever/$f ; done
+chroot /media/whatever
+dpkg-reconfigure grub-pc
+You will get a menu asking you what drive(s) grub should be installed on. Choose whatever drive(s) the computer will be booting from.
+
+For more information on repairing grub, see GrubHowto
+d
+Ref
+https://help.ubuntu.com/community/BackupYourSystem/TAR
