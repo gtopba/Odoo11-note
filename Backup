@@ -1,4 +1,4 @@
-tar -cvpzf backup.tar.gz --exclude=/backup.tar.gz --one-file-system /
+sudo tar -cvpzf backup.tar.gz --exclude=/backup.tar.gz --one-file-system /
 
 Restoring
 You will want to restore from a Live CD. If needed, first partition and format the drive. You can do this with gparted. Then simply mount the partition you are going to restore somewhere. If you open the drive in nautilus, it will be auto mounted somewhere under /media. Take a look to find out where with:
