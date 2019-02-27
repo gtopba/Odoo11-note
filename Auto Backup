@@ -7,4 +7,16 @@ exit
 wget https://github.com/Yenthe666/auto_backup/archive/11.0.zip
 unzip auto_backup
 sudo mv auto_backup /opt/odoo/odoo11/addons
-back to odoo web, open dev mode, update app list, then install the new app
+
+In Odoo dev mode
+
+update app list, then install the new app
+Settings -> Back-ups -> Configure back-ups -> Create -> with default settings + Auto remove after 30 days -> Save
+
+Automatic backups of the database can be scheduled as follows:
+Go to Settings / Technical / Automation / Scheduled Actions.
+Search the action named 'Backup scheduler'.
+Set the scheduler to active and fill in how often you want backups generated.
+Set what time you want to backup. -> Save
+
+Done!!
