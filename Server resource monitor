@@ -1,1 +1,9 @@
-...
+curl -L https://bit.ly/glances | /bin/bash
+
+For the standalone mode, just run:
+
+$ glances
+For the Web server mode, run:
+
+$ glances -w
+and enter the URL http://<ip>:61208 in your favorite web browser.
