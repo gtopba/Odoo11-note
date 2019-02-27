@@ -7,3 +7,21 @@ For the Web server mode, run:
 
 $ glances -w
 and enter the URL http://<ip>:61208 in your favorite web browser.
+
+When Glances is running, you can press some special keys to give commands to it:
+
+c: Sort processes by CPU%  
+m: Sort processes by MEM%  
+p: Sort processes by name  
+i: Sort processes by IO Rate  
+d: Show/hide disk I/O stats  
+f: Show/hide file system stats  
+n: Show/hide network stats  
+s: Show/hide sensors stats  
+b: Bit/s or Byte/s for network IO  
+w: Delete warning logs  
+x: Delete warning and critical logs  
+1: Global CPU or Per Core stats  
+h: Show/hide this help message  
+q: Quit (Esc and Ctrl-C also work)  
+l: Show/hide log messages
