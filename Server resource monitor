@@ -1,3 +1,14 @@
+Check all process running
+
+ps -a
+ps -e
+ps -au
+ps -axu
+ps -ef
+ps -eF
+
+ref https://www.hostpacific.com/ps-command-for-linux-process-monitoring-1/
+----------------------------------------------------------------------------------
 curl -L https://bit.ly/glances | /bin/bash
 
 For the standalone mode, just run:
