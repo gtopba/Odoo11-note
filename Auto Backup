@@ -13,6 +13,9 @@ In Odoo dev mode
 update app list, then install the new app
 Settings -> Back-ups -> Configure back-ups -> Create -> with default settings + Auto remove after 30 days -> Save
 
+!Destination path must be absolute
+	/opt/odoo/backup
+
 Automatic backups of the database can be scheduled as follows:
 Go to Settings / Technical / Automation / Scheduled Actions.
 Search the action named 'Backup scheduler'.
