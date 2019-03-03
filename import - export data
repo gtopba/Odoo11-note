@@ -1,0 +1,3 @@
+- Check database ID of an object from the url
+- exporting will automaticaly output the External ID for later importing
+- Some object can import with name but some need import with database ID
