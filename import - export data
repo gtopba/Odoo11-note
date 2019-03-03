@@ -1,3 +1,7 @@
 - Check database ID of an object from the url
 - exporting will automaticaly output the External ID for later importing
 - Some object can import with name but some need import with database ID
+
+For example 
+1. Inventory valuation can be Manual or Automated
+2. Expense Account / Database ID is the number seen from the url
