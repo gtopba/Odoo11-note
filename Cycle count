@@ -4,3 +4,7 @@ Required Addons
 3. Stock Inventory Verification Request
 4. Stock Inventory Discrepancy
 5. Stock Inventory Exclude Sublocation
+
+How
+1. Go to Inventory > Configuration > Cycle Count Rules. Create as much cycle count rules as you want.
+2. Go to Inventory > Configuration > Warehouse Management > Warehouses and set a Cycle Count Planning Horizon for each warehouse. Only the counts in the horizon will be created.
