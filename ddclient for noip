@@ -20,3 +20,6 @@ to test run this command:
 sudo ddclient -daemon=0 -debug -verbose -noquiet
 then restart the service
 sudo service ddclient restart
+
+to see output
+  sudo ddclient -query
