@@ -2,6 +2,7 @@ Imprementation of Inventory Module without Accounting Module.
 
 Tips! UoM Import must have same the languge as the user. All information to be imported must have the same languge as the user.
 Tip! when add new language, deactivate the Translatble option so that it update name automatically when duplicate product.
+Tip! in Debug mode, hover the cursor over the field to see field name used for import eg. attribute_line_ids / attribute_id 
 
 1. Enable UoM, Attribute and Variants, Storage Locations, Multi-Warehouses, Multiple prices per product
 2. Import Product Categories with the fields [Name, Parent Category]
