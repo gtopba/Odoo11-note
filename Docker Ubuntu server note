@@ -62,6 +62,6 @@ Install
   3.3 Recap and cheat sheet
     - docker-machine version
     - docker swarm join     # other machines join the swarm as workers
-    - docker-machine ls *[to be continued https://docs.docker.com/get-started/part4/]*
+    - docker-machine ls *[to be continued https://docs.docker.com/get-started/part4/]* *[Go learn Kubernates !!!!]*
 *** Access VM from other computer need port forwarding in VirtualBox ***
 
