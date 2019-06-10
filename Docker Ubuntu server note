@@ -41,7 +41,7 @@ Install
     - cpu, memory
   2.2 Recap and cheat sheet
     - docker-compose --version
-    - docker swarm init
+    - docker swarm init     # make your current machine a swarm manager
     - docker stack deploy -c <composefile> <appname>      # Create service appname_servicename and create network eg. appname_webnet
     - docker service ls     # Show service eg. appname_web
     - docker stack services <stackname>      # Same result as above (stackname = appname)
@@ -52,6 +52,16 @@ Install
     - docker stack rm <appname>     # Tear down an application
     - docker swarm leave --force      # Take down a single node swarm from the manager
   2.3 A Stack (app) <- Services, A Service <- Single image containers (Tasks)
- 
+  
+3. Docker Machine
+  3.1 Docker Machine is a tool for provisioning and managing your Dockerized hosts (hosts with Docker Engine on them).
+  3.2 A swarm is a group of machines = Cluster
+  3.2 $ base=https://github.com/docker/machine/releases/download/v0.16.0 &&
+  curl -L $base/docker-machine-$(uname -s)-$(uname -m) >/tmp/docker-machine &&
+  sudo install /tmp/docker-machine /usr/local/bin/docker-machine
+  3.3 Recap and cheat sheet
+    - docker-machine version
+    - docker swarm join     # other machines join the swarm as workers
+    - docker-machine ls *[to be continued https://docs.docker.com/get-started/part4/]*
 *** Access VM from other computer need port forwarding in VirtualBox ***
 
