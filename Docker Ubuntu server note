@@ -33,6 +33,25 @@ Install
     - docker tag <image> username/repository:tag
     - docker push username/repository:tag
     - docker run username/repository:tag
-    
 
-2. 
+2. Docker Compose : https://github.com/docker/compose/releases
+  2.1 A service only runs one image
+    - ports mapping
+    - replicas of the container(1 replica = 1 task)
+    - cpu, memory
+  2.2 Recap and cheat sheet
+    - docker-compose --version
+    - docker swarm init
+    - docker stack deploy -c <composefile> <appname>      # Create service appname_servicename and create network eg. appname_webnet
+    - docker service ls     # Show service eg. appname_web
+    - docker stack services <stackname>      # Same result as above (stackname = appname)
+    - docker service ps <service>     # List the tasks for your service eg. appname_web
+    - docker container ls -q      # also show running tasks include other not in the swarm
+    - docker stack ps <app name>      # view all tasks of a stack
+    - docker stack ls     # Services stack running containers
+    - docker stack rm <appname>     # Tear down an application
+    - docker swarm leave --force      # Take down a single node swarm from the manager
+  2.3 A Stack (app) <- Services, A Service <- Single image containers (Tasks)
+ 
+*** Access VM from other computer need port forwarding in VirtualBox ***
+
