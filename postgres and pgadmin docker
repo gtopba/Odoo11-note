@@ -1,0 +1,24 @@
+sudo su postgres
+psql
+\c demo   ;Connect to demo database
+select name from sale_order where id=7; Feild = name, Model/Table = sale_order, id=7 can be found in debug mode
+The command will return value in the field "name" of the tanle sale_order in this case type char
+
+PostgreSQL
+docker run -d -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=odoo -e POSTGRES_DB=postgres --name db postgres:10
+
+PgAdmin4
+
+1. docker pull dpage/pgadmin4
+2. docker run -p 80:80 -e "PGADMIN_DEFAULT_EMAIL=user@domain.com" -e "PGADMIN_DEFAULT_PASSWORD=SuperSecret" -d dpage/pgadmin4
+3. forward port 80 to 80 in VirtualBox config
+4. In web browser, virtualboxip:80
+5. Add New Server 
+  name : what ever you want
+  host : containerip (docker inspect <container ID> , use docker ps to check ip)
+  port : 5432
+  maintenance db : postgres
+  user : as specify when run postgres image
+  password : same as above
+6. Save
+  

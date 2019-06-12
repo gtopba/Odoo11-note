@@ -1,5 +1,0 @@
-sudo su postgres
-psql
-\c demo   ;Connect to demo database
-select name from sale_order where id=7; Feild = name, Model/Table = sale_order, id=7 can be found in debug mode
-The command will return value in the field "name" of the tanle sale_order in this case type char
