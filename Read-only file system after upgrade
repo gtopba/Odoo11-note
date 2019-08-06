@@ -1,0 +1,50 @@
+$ sudo -i
+# fdisk -l
+
+Fdisk will inform your partitions as they are called, something like:
+
+Disk /dev/sda: 74,5 GiB, 80032038912 bytes, 156312576 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xab6eab6e
+
+Device     Boot    Start       End   Sectors  Size Id Type
+/dev/sda1  *        2048  54750094  54748047 26,1G 83 Linux
+/dev/sda2       54751230 156311551 101560322 48,4G  5 Extended
+/dev/sda5       54751232  56702975   1951744  953M 82 Linux swap / Solaris
+/dev/sda6       56705024 156311551  99606528 47,5G 83 Linux
+
+For each of the Linux partitions, run the following commands:
+
+# umount /dev/sda?    
+# fsck -y /dev/sda?
+
+In the example would:
+
+# umount /dev/sda1    
+# umount /dev/sda6    
+# fsck -y /dev/sda1
+# fsck -y /dev/sda6
+
+Then continue running, assuming that / is /dev/sda1:
+
+# mount /dev/sda1 /mnt
+# mount --bind /dev /mnt/dev 
+# mount --bind /dev/pts /mnt/dev/pts
+# mount --bind /proc /mnt/proc
+# mount --bind /sys /mnt/sys
+# mount --bind /etc/resolv.conf /mnt/etc/resolv.conf
+# chroot /mnt
+# dpkg --configure -a
+# apt-get -f install
+# apt-get update
+# apt-get dist-upgrade
+# apt-get autoremove
+# apt-get clean
+# umount /mnt
+# exit
+# reboot
+
+Answered Jun 25 15 kyodake
