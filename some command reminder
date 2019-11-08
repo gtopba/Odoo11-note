@@ -11,3 +11,12 @@ ps aux | grep <postgres>
 
 short keys
 1. Shift+F5 : reflesh the page ignoring the cache
+
+
+journalctl -u service-name.service
+Following option
+-b see only log messages for the current boot
+--no-pager will print full log
+-e will start the log at the end
+-f will follow (print) updates to the log
+--help will let you see all available options
