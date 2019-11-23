@@ -19,11 +19,10 @@ ctrl+o to save ctrl+x to exit
 
 ## GOOGLE
 sudo nano /etc/ddclient.conf
-  daemon=600
-  pid=/var/run/ddclient.pid
+  daemon=300
   use=web
   ssl=yes
-  protocol=noip
+  protocol=googledomains
   login=<USERNAME>
   password='<PASSWORD>'
   <YOUR_HOSTNAME>
