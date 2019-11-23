@@ -1,4 +1,5 @@
 sudo apt-get install ddclient
+## NOIP
 sudo nano /etc/ddclient.conf
   daemon=3600
   pid=/var/run/ddclient.pid
@@ -15,6 +16,17 @@ run_ipup="false"
 run_daemon="true"
 daemon_interval=3600
 ctrl+o to save ctrl+x to exit
+
+## GOOGLE
+sudo nano /etc/ddclient.conf
+  daemon=600
+  pid=/var/run/ddclient.pid
+  use=web
+  ssl=yes
+  protocol=noip
+  login=<USERNAME>
+  password='<PASSWORD>'
+  <YOUR_HOSTNAME>
 
 to test run this command:
 sudo ddclient -daemon=0 -debug -verbose -noquiet
